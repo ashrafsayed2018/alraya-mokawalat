@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 antialiased font-sans">
+       <!-- start header -->
+        <header class="lg:px-16 px-8 bg-white flex flex-wrap items-center py-4 shadow-md">
+          <div class="flex-1 flex justify-between items-center">
+            <a href="#" class="text-xl">شركة الرايه</a>
+          </div>
+      
+          <label for="menu-toggle" class="pointer-cursor md:hidden block">
+            <svg class="fill-current text-gray-900"
+              xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+              <title>menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </label>
+          <input class="hidden" type="checkbox" id="menu-toggle" />
+      
+          <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+              <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <li><a class="md:p-4 py-3 px-0 block" href="#">من نحن</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="#">اعمالنا</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="#">المدونة</a></li>
+                <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">اتصل بنا</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+       <!-- end header -->
+
+       <!-- start hero  -->
+       <div class="hero">
+        <div class="container mx-auto w-full overflow-hidden relative">
+            <div class="w-full h-full absolute">
+                <div class="w-1/4 h-full absolute z-50 left-0" style="background: linear-gradient(to right, #edf2f7 0%, rgba(255, 255, 255, 0) 100%);"></div>
+                <div class="w-1/4 h-full absolute z-50 right-0" style="background: linear-gradient(to left, #edf2f7 0%, rgba(255, 255, 255, 0) 100%);"></div>
+            </div>
+    
+            <div class="carousel-items flex items-center justify-center" style="width: fit-content; animation: carouselAnim 10s infinite alternate linear;">
+            </div>
+    
+        </div>
+       </div>
+       <!-- end  hero -->
+        <div class="mx-auto max-w-6xl  text-right p-8">
+       <!-- about us   -->
+
+       <div class="about my-10 ">
+        <h1 class="font-bold text-4xl  my-8 text-center">من نحن</h1>
+        <p> تأسس فريق الرايه الخليجيه 
+           للمقاولات العامه للتجارة العامة 
+           والمقاولات مند ٢٠١٥ في تنفيذ 
+           أعمال التشطيبات الداخليه 
+           والخارجيه وتصميم الوجهات 
+           وإنشاء الهيكل الاسود .نقوم 
+           بعمل عزل الاسطح والحمامات 
+           وحمامات السباحه بالجيتاروف 
+           والمواد الخصوصيه والطربال 
+           والتصليحات زيادة ادوار توسعه 
+           للمبني اعمال هدم . كما قمنا 
+           بتنفيذ أعمال البنيه التحتيه بكل 
+           جميع انواعها من الحفريات 
+           صحي ديكتايل مطر. كما قمنا 
+           بتنفيذ طبقات الترابيه من 
+           sub Base,Sub ،الأساس طبقه
+           great وطبقات الاسفلت من 
+           رش البتومين وطبقه الرابطه 
+           والطبقه الاسفلتيه وكل ما 
+           يشمل اعمال الطرق مع اعمال 
+           الكربستون والبلاط المتداخل 
+           الإنترلوك</p>
+       </div>
+
+            <!-- our work -->
+            <div class="work">
+                <h1 class="font-bold text-4xl  my-8 text-center">صور من اعمالنا</h1>
+                <div class="workImages grid md:grid-cols-3 gap-4"> 
+                </div>
+            </div>
+
+            <!-- videos -->
+
+            <div class="videos my-16">
+                <h1 class="font-bold text-4xl my-8 text-center">فيديوهات من اعمالنا</h1>
+                <div class="video-work grid md:grid-cols-3 gap-4">
+
+                </div>
+            </div>
+
+            <!-- footer  -->
+
+         
+        </div>
+        <div class="footer bg-blue-600 p-6">
+            <div class="container max-w-6xl mx-auto grid md:grid-cols-3">
+                <!-- social media -->
+
+                <div class="social-media flex flex-col justify-center items-center text-center gap-4" >
+                     <h1 class="text-lg text-center text-white">مواقع التواصل الاجتماعي</h1>
+                    <ul class="list-none flex gap-3 items-center justify-between">
+                        <li>
+                            <a href="">
+                                <i class="fab fa-facebook fa-2x text-blue-900"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-instagram fa-2x text-purple-800"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-snapchat fa-2x text-yellow-900"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- contact -->
+
+                <div class="contact">
+                    <h1 class=" text-xl text-center text-white my-4"> اتصل بنا</h1>
+                    <ul class="grid md:grid-cols-2 gap-4">
+                        <li class="flex gap-2 items-center justify-center ">
+                            <i class="fa fa-phone text-blue-900 fa-lg"></i>
+                            <a href="tel:51214447" class="text-white">
+                            51214447
+                            </a>
+                       </li>
+                       <li class="flex gap-2 items-center justify-center ">
+                            <i class="fab fa-whatsapp text-green-900 fa-lg"></i>
+                            <a href="https://wa.me/96551214447" class="text-white">
+                            51214447
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- fixed call -->
+
+        <div class="fixed right-2 bottom-2">
+            
+            <ul class="flex flex-col gap-3">
+                <li class="bg-blue-800 w-10 h-10 flex items-center justify-center rounded-full ">
+                    <a href="tel:51214447">
+                        <i class="fa fa-phone text-white"></i>
+                    </a>
+                </li>
+                <li class="bg-green-800 w-10 h-10 flex items-center justify-center rounded-full ">
+                    <a href="https://wa.me/96551214447">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+       <script>
+
+         let images = [
+            "./images/001.jpg",
+            "./images/002.jpg",
+            "./images/003.jpg",
+            "./images/004.jpg",
+            "./images/005.jpg",
+            "./images/006.jpg",
+            "./images/007.jpg",
+            "./images/008.jpg",
+            "./images/009.jpg",
+            "./images/010.jpg",
+            "./images/011.jpg",
+            "./images/012.jpg",
+            "./images/013.jpg",
+            "./images/014.jpg",
+            "./images/015.jpg"
+         ];
+
+
+         const carouselItems = document.querySelector(".carousel-items")
+         const workImages = document.querySelector(".workImages") 
+         const videoWork = document.querySelector(".video-work") 
+         console.log(workImages)
+         for(let i = 0; i < images.length; i++) {
+            const div = document.createElement("div");
+            div.classList.add("carousel-focus","flex","items-center","flex-col","relative","bg-white","mx-5","my-10","px-4","py-3","rounded-lg","shadow-lg","h-80");
+
+
+            div.style.width = "270px"
+            const image  = document.createElement("img");
+            image.src = images[i];
+            image.classList.add("h-80","w-80","object-fit","center");
+      
+            carouselItems.appendChild(div);
+            div.appendChild(image)
+
+            // append images to images div in our work area
+
+     
+            
+         }
+
+         for(i = 0; i< images.length; i++) {
+            const image  = document.createElement("img");
+            image.src = images[i];
+            workImages.appendChild(image);
+         }
+
+
+         for(i = 1; i<= 5; i++) {
+            videoWork.innerHTML += `<video style="width:100%;height:400" controls>
+            <source src="./videos/${i}.mp4" type="video/mp4">
+            <source src="mov_bbb.ogg" type="video/ogg">
+            Your browser does not support HTML5 video.
+            </video>`;
+         }
+
+
+
+
+       </script>
+</body>
+</html>
