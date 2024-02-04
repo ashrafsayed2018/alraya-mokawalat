@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        video {
+           height: 400px !important;
+           object-fit: cover !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 antialiased font-sans">
        <!-- start header -->
@@ -76,6 +84,18 @@
             <div class="work">
                 <h1 class="font-bold text-4xl  my-8 text-center">صور من اعمالنا</h1>
                 <div class="workImages grid md:grid-cols-3 gap-4"> 
+                </div>
+            </div>
+
+            <div class="azel-work">
+                <h1 class="font-bold text-4xl  my-8 text-center">اعمال العازل</h1>
+                <div class="azelWorkImages grid md:grid-cols-3 gap-4"> 
+                </div>
+            </div>
+
+            <div class="offers-work">
+                <h1 class="font-bold text-4xl  my-8 text-center">عروض اسعار</h1>
+                <div class="offersImages grid md:grid-cols-3 gap-4"> 
                 </div>
             </div>
 
@@ -159,7 +179,21 @@
         
        <script>
 
-         let images = [
+      window.onload = function() {
+
+        
+     const AllImages = document.querySelectorAll("img")
+
+        AllImages.forEach(function(image) {
+
+          image.setAttribute("loading","lazy")
+        });
+
+      }
+
+
+
+         const images = [
             "./images/001.jpg",
             "./images/002.jpg",
             "./images/003.jpg",
@@ -178,15 +212,46 @@
          ];
 
 
+         
+         const images2 = [
+            "./images2/001.jpeg",
+            "./images2/002.jpeg",
+            "./images2/003.jpeg",
+            "./images2/004.jpeg",
+            "./images2/005.jpeg",
+            "./images2/006.jpeg",
+            "./images2/007.jpeg",
+            "./images2/008.jpeg",
+            "./images2/009.jpeg",
+            "./images2/010.jpeg",
+            "./images2/011.jpeg",
+            "./images2/012.jpeg",
+            "./images2/013.jpeg",
+            "./images2/014.jpeg",
+            "./images2/015.jpeg"
+         ];
+
+
+         
+         const  offerImages  = [
+            "./offerImages/001.jpeg",
+            "./offerImages/002.jpeg",
+            "./offerImages/003.jpeg",
+            "./offerImages/004.jpeg",
+            "./offerImages/005.jpeg",
+         ];
+
+
          const carouselItems = document.querySelector(".carousel-items")
          const workImages = document.querySelector(".workImages") 
+         const azelWorkImages = document.querySelector(".azelWorkImages") 
+         const offersimages = document.querySelector(".offersImages") 
+         
          const videoWork = document.querySelector(".video-work") 
-         console.log(workImages)
+    
          for(let i = 0; i < images.length; i++) {
             const div = document.createElement("div");
             div.classList.add("carousel-focus","flex","items-center","flex-col","relative","bg-white","mx-5","my-10","px-4","py-3","rounded-lg","shadow-lg","h-80");
-
-
             div.style.width = "270px"
             const image  = document.createElement("img");
             image.src = images[i];
@@ -195,10 +260,7 @@
             carouselItems.appendChild(div);
             div.appendChild(image)
 
-            // append images to images div in our work area
-
-     
-            
+            // append images to images div in our work area 
          }
 
          for(i = 0; i< images.length; i++) {
@@ -207,9 +269,26 @@
             workImages.appendChild(image);
          }
 
+        //  azel images 
 
-         for(i = 1; i<= 5; i++) {
-            videoWork.innerHTML += `<video style="width:100%;height:400" controls>
+        for(i = 0; i< images2.length; i++) {
+            const image  = document.createElement("img");
+            image.src = images2[i];
+            azelWorkImages.appendChild(image);
+         }
+
+        //  offer images 
+
+        for(i = 0; i< offerImages.length; i++) {
+            const image  = document.createElement("img");
+            image.src =  offerImages[i];
+            offersimages.appendChild(image);
+         }
+
+
+
+         for(i = 1; i<= 16; i++) {
+            videoWork.innerHTML += `<video style="width:100%;height:400!important" class="h-[300px]" controls>
             <source src="./videos/${i}.mp4" type="video/mp4">
             <source src="mov_bbb.ogg" type="video/ogg">
             Your browser does not support HTML5 video.
