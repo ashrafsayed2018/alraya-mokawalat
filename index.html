@@ -144,14 +144,14 @@
                     <ul class="grid md:grid-cols-2 gap-4">
                         <li class="flex gap-2 items-center justify-center ">
                             <i class="fa fa-phone text-blue-900 fa-lg"></i>
-                            <a href="tel:51214447" class="text-white">
-                            51214447
+                            <a href="tel:50468006" class="text-white">
+                            50468006
                             </a>
                        </li>
                        <li class="flex gap-2 items-center justify-center ">
                             <i class="fab fa-whatsapp text-green-900 fa-lg"></i>
-                            <a href="https://wa.me/96551214447" class="text-white">
-                            51214447
+                            <a href="https://wa.me/96560079100" class="text-white">
+                                60079100
                             </a>
                         </li>
                     </ul>
@@ -165,12 +165,12 @@
             
             <ul class="flex flex-col gap-3">
                 <li class="bg-blue-800 w-10 h-10 flex items-center justify-center rounded-full ">
-                    <a href="tel:51214447">
+                    <a href="tel:50468006">
                         <i class="fa fa-phone text-white"></i>
                     </a>
                 </li>
                 <li class="bg-green-800 w-10 h-10 flex items-center justify-center rounded-full ">
-                    <a href="https://wa.me/96551214447">
+                    <a href="https://wa.me/96560079100">
                         <i class="fab fa-whatsapp text-white"></i>
                     </a>
                 </li>
@@ -288,9 +288,24 @@
         //  offer images 
 
         for(i = 0; i< offerImages.length; i++) {
+            const mainDiv = document.createElement("div");
             const image  = document.createElement("img");
+            mainDiv.style.position="relative";
+            const div = document.createElement("div");
+            div.style.position="absolute";
+            div.style.bottom="65px";
+            div.style.left="0";
+            div.style.width="100%";
+            div.style.height="60px";
+            div.style.backgroundColor="white";
+            // add  media query 
+            if ( window.matchMedia("(max-width: 700px)").matches ) {
+                div.style.height="80px";
+            }
+            mainDiv.appendChild(div);
+            mainDiv.appendChild(image)
             image.src =  offerImages[i];
-            offersimages.appendChild(image);
+            offersimages.appendChild(mainDiv);
          }
 
 
